@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pap Kamu adalah Semangat Ku</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@400;600&display=swap');
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      background: #ffe6e8;
+      color: #422727;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem 3rem;
+      min-height: 100vh;
+    }
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      color: #d15762;
+      margin-bottom: 1rem;
+      text-shadow: 1px 1px 3px rgba(209, 87, 96, 0.5);
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.2rem;
+      max-width: 700px;
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(209, 87, 96, 0.4);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 1rem;
+    }
+    .card:hover {
+      transform: translateY(-8px) scale(1.05);
+      box-shadow: 0 12px 25px rgba(209, 87, 96, 0.7);
+    }
+    .card img {
+      width: 100%;
+      height: 180px; /* fixed height */
+      border-radius: 12px;
+      object-fit: contain; /* changed to contain to prevent cropping */
+      margin-bottom: 0.8rem;
+      background: white;
+    }
+    .card p {
+      font-size: 1rem;
+      color: #752a2f;
+      font-weight: 600;
+      margin: 0;
+      padding: 0 0.5rem;
+    }
+    .back-link {
+      text-decoration: none;
+      color: #d15762;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-top: 3rem; /* increased space from flip card */
+      display: inline-block;
+      padding: 0.4rem 1rem;
+      border: 2px solid #d15762;
+      border-radius: 25px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .back-link:hover {
+      background-color: #d15762;
+      color: white;
+    }
+    .flip-card {
+      perspective: 1000px;
+      margin-top: 3rem; /* added space above flip card */
+    }
+    .flip-card-inner {
+      position: relative;
+      width: 300px; /* Adjust width as needed */
+      height: 100px; /* Adjust height as needed */
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      cursor: pointer;
+    }
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 1rem;
+      box-shadow: 0 6px 15px rgba(209, 87, 96, 0.4);
+    }
+    .flip-card-front {
+      background: #d15762;
+      color: white;
+    }
+    .flip-card-back {
+      background: white;
+      color: #752a2f;
+      transform: rotateY(180deg);
+    }
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      .card p {
+        font-size: 0.95rem;
+      }
+      .flip-card {
+        width: 90vw; /* Responsive width */
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Pap Imut Kamu, Semangat Aku</h1>
+  <div class="gallery">
+    <div class="card">
+      <img src="Pap/pap1.jpeg" alt="Pap Imut 1"/>
+      <p>Senymu yang manis selalu membuatku tersenyum.</p>
+    </div>
+    <div class="card">
+      <img src="Pap/pap2.jpeg" alt="Pap Imut 2"/>
+      <p>melihat fotomu seakan aku ingin menguasai bumi.</p>
+    </div>
+    <div class="card">
+      <img src="Pap/pap3.jpeg" alt="Pap Imut 3"/>
+      <p>Setiap saat bersamamu terasa sangat spesial.</p>
+    </div>
+  </div>
+  
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <p>Setiap aku di kirim dengan mu selalu berfikir.</p>
+      </div>
+      <div class="flip-card-back">
+        <p>Kamu lah Wanita yang selama ini aku cari.</p>
+      </div>
+    </div>
+  </div>
+
+  <a href="index.html" class="back-link">&larr; Kembali lagi sayangg</a>
+</body>
+</html>
+

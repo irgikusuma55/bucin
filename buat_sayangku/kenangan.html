@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Indahnya Momen Kita</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@400;600&display=swap');
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      background: #ffe6e8;
+      color: #422727;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem 3rem;
+      min-height: 100vh;
+    }
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      color: #d15762;
+      margin-bottom: 1rem;
+      text-shadow: 1px 1px 3px rgba(209, 87, 96, 0.5);
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1.2rem;
+      max-width: 700px;
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+    .card {
+      perspective: 1000px;
+    }
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 200px; /* Adjust height as needed */
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      cursor: pointer;
+    }
+    .card:hover .card-inner {
+      transform: rotateY(180deg);
+    }
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(209, 87, 96, 0.4);
+      overflow: hidden;
+    }
+    .card-front {
+      background: white;
+    }
+    .card-back {
+      background: #d15762;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      transform: rotateY(180deg);
+      padding: 1rem;
+    }
+    .gallery img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+    .memory-text {
+      max-width: 700px;
+      font-size: 1.15rem;
+      line-height: 1.7;
+      background: white;
+      padding: 1rem 2rem;
+      border-radius: 15px;
+      box-shadow: 0 8px 30px rgba(209, 87, 96, 0.2);
+      text-align: center;
+      color: #752a2f;
+      font-weight: 600;
+    }
+    .back-link {
+      text-decoration: none;
+      color: #d15762;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-top: 2rem;
+      display: inline-block;
+      padding: 0.4rem 1rem;
+      border: 2px solid #d15762;
+      border-radius: 25px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .back-link:hover {
+      background-color: #d15762;
+      color: white;
+    }
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      .memory-text {
+        padding: 1rem 1rem;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Momen Indah Kita</h1>
+  <div class="gallery">
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="kenangan/k1.jpeg" alt="Momen Indah 1" />
+        </div>
+        <div class="card-back">
+          <p>Ini adalah momen ketika kita pertama kali Ngebaso. Senyummu dan tatapan membuatku jatuh cinta.</p>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="kenangan/k2.jpeg" alt="Momen Indah 2" />
+        </div>
+        <div class="card-back">
+          <p>Sayang masih inget ga?, foto ini awal kita deket dan foto ini juga awal aku memberanikan diri duduk di samping kamu :V</p>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="kenangan/k3.jpeg" alt="Momen Indah 3" />
+        </div>
+        <div class="card-back">
+          <p>Ini awal kita foto di cermin Kampus, dan sekarang udah banyak banget foto di cermin ini tapi masing - masing punya cerita-nya sendiri</p>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="kenangan/k4.jpeg" alt="Momen Indah 4" />
+        </div>
+        <div class="card-back">
+          <p>ini moment pass aku pulang ngelatih, sore menjelang magrib, aku jemput kamu di kampus, dan kita makan dulu deh, 
+            dan disini juga awal kita pegangan tangan
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="kenangan/k5.jpeg" alt="Momen Indah 5" />
+        </div>
+        <div class="card-back">
+          <p>Ketika kita berdua menari dengan bayangan tugas - tugas yang belum selsaii.</p>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="kenangan/k6.jpeg" alt="Momen Indah 6" />
+        </div>
+        <div class="card-back">
+          <p>Hari ketika kita berjanji untuk selalu bersama. Cinta kita abadi.</p>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="kenangan/k7.jpeg" alt="Momen Indah 7" />
+        </div>
+        <div class="card-back">
+          <p>Kamu adalah rumah Bagiku sayangg. tempat ternyaman untuk pulang.</p>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="kenangan/k8.jpeg" alt="Momen Indah 8" />
+        </div>
+        <div class="card-back">
+          <p>Setiap momen bersamamu adalah anugerah. Aku mencintaimu lebih dari kata-kata.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="memory-text">
+    <p>
+      Setiap foto ini merekam detik berharga yang kita tinggalkan bersama.
+      Dari tawa tulus, pelukan hangat, hingga momen penuh cinta, kenangan ini terus mengisi hati kita dengan kebahagiaan tak terhingga.
+      Semoga setiap langkah ke depan semakin mempererat ikatan cinta kita dan menambah koleksi momen indah yang tak terlupakan.
+      I LOVE YOU
+    </p>
+  </div>
+  <a href="index.html" class="back-link">&larr; Kembali lagi sayangg piling card selanjutnya ya!</a>
+</body>
+</html>
