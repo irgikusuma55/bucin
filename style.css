@@ -1,0 +1,202 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@400;600&display=swap');
+
+:root {
+  --primary-color: #e5989b;
+  --secondary-color: #b5838d;
+  --accent-color: #f4a261;
+  --background-gradient: linear-gradient(135deg, #fad0c4 0%, #ffd1ff 100%);
+  --text-color: #4a3c3c;
+  --shadow-color: rgba(213, 158, 158, 0.4);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: var(--background-gradient);
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  overflow-x: hidden;
+}
+
+.container {
+  background: #fff;
+  border-radius: 15px;
+  max-width: 700px;
+  width: 100%;
+  box-shadow: 0 10px 30px var(--shadow-color);
+  padding: 2.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  animation: fadeInUp 1s ease forwards;
+}
+
+header {
+  text-align: center;
+}
+
+header h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 0.3rem;
+  text-shadow: 1px 1px 3px var(--shadow-color);
+}
+
+header p {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+  letter-spacing: 0.05em;
+}
+
+main h2 {
+  font-family: 'Great Vibes', cursive;
+  color: var(--accent-color);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 0.3rem;
+  letter-spacing: 0.03em;
+}
+
+.love-message p,
+.promise-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-color);
+  text-align: center;
+  padding: 0 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.memory-section {
+  text-align: center;
+}
+
+.memories {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.memory-card {
+  background: var(--primary-color);
+  color: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(229, 146, 146, 0.5);
+  width: 180px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+  user-select: none;
+}
+.memory-card:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 12px 25px rgba(229, 146, 146, 0.7);
+}
+
+
+.memory-card:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 12px 25px rgba(229, 146, 146, 0.7);
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.music-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#playPauseBtn {
+  background: var(--accent-color);
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 6px 12px rgba(242, 169, 106, 0.6);
+  user-select: none;
+}
+
+#playPauseBtn:hover,
+#playPauseBtn:focus {
+  background-color: #e07b39;
+  outline: none;
+}
+
+.music-info {
+  font-style: italic;
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+}
+
+footer p {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  text-shadow: 1px 1px 2px var(--shadow-color);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .container {
+    padding: 2rem 1.5rem;
+  }
+
+  header h1 {
+    font-size: 2.4rem;
+  }
+
+  main h2 {
+    font-size: 1.6rem;
+  }
+
+  .memory-card {
+    width: 100%;
+  }
+
+  .love-message p,
+  .promise-section p {
+    padding: 0 0.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
